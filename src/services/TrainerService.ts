@@ -32,7 +32,7 @@ export class TrainerService {
         return this.trainerRepository.save(trainer)
     }
 
-    listTrainers(page: number = 1, limit: number = 10, filter?: string): Trainer[] {
+    listTrainers(page = 1, limit = 10, filter?: string): Trainer[] {
         ValidationHelper.requireTrue(page > 0, 'Page must be greater than 0')
         ValidationHelper.requireTrue(limit > 0, 'Limit must be greater than 0')
 

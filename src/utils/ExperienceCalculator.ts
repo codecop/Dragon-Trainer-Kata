@@ -8,7 +8,7 @@ export class ExperienceCalculator {
         return threshold - currentExp
     }
 
-    static calculateTrainingExperience(duration: number, skillMultiplier: number = 1.0): number {
+    static calculateTrainingExperience(duration: number, skillMultiplier = 1.0): number {
         return Math.floor(duration * 10 * skillMultiplier)
     }
 

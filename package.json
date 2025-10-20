@@ -5,6 +5,9 @@
     "devDependencies": {
         "@types/jest": "^26.0.0",
         "@types/node": "^10.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.33.0",
+        "@typescript-eslint/parser": "^4.33.0",
+        "eslint": "^7.32.0",
         "jest": "^26.0.0",
         "ts-jest": "^26.0.0",
         "ts-node": "^10.0.0",
@@ -13,6 +16,9 @@
     "scripts": {
         "test": "jest --verbose",
         "build": "tsc",
-        "test:coverage": "jest --coverage"
+        "test:coverage": "jest --coverage",
+        "lint": "eslint src tests --ext .ts",
+        "lint:fix": "eslint src tests --ext .ts --fix",
+        "verify": "npm run lint && npm test"
     }
 }

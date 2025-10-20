@@ -42,7 +42,7 @@ export class DragonModel {
     }
 
     canBreed(): boolean {
-        if (!this.breedingCooldownUntil) return true
+        if (!this.breedingCooldownUntil) {return true}
         return new Date() >= this.breedingCooldownUntil
     }
 }
