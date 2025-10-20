@@ -1,0 +1,5 @@
+export * from './DragonRepository'
+export * from './TrainerRepository'
+export * from './BreedRepository'
+export * from './SkillRepository'
+export * from './QuestRepository'
