@@ -14,26 +14,26 @@
 
 **1.1 Define Core Types & Enums**
 
-- [ ] Element types (Fire, Water, Earth, Air, etc.)
-- [ ] Dragon evolution stages (Hatchling, Juvenile, Adult, Elder)
-- [ ] Quest status, difficulty levels
-- [ ] Skill categories and types
+- [x] Element types (Fire, Water, Earth, Air, etc.)
+- [x] Dragon evolution stages (Hatchling, Juvenile, Adult, Elder)
+- [x] Quest status, difficulty levels
+- [x] Skill categories and types
 
 **1.2 Entity Models**
 
-- [ ] `Dragon` - id, name, breedId, trainerId, level, stats, elementalAffinity, evolutionStage, skills
-- [ ] `Trainer` - id, name, email, registrationDate, dragonIds
-- [ ] `Breed` - id, name, baseStats, elementalAffinity, evolutionRules
-- [ ] `Skill` - id, name, category, levelRequirement, prerequisites
-- [ ] `TrainingSession` - id, dragonId, skillId, timestamp, experienceGained
-- [ ] `Quest` - id, name, difficulty, requirements, rewards
+- [x] `Dragon` - id, name, breedId, trainerId, level, stats, elementalAffinity, evolutionStage, skills
+- [x] `Trainer` - id, name, email, registrationDate, dragonIds
+- [x] `Breed` - id, name, baseStats, elementalAffinity, evolutionRules
+- [x] `Skill` - id, name, category, levelRequirement, prerequisites
+- [x] `TrainingSession` - id, dragonId, skillId, timestamp, experienceGained
+- [x] `Quest` - id, name, difficulty, requirements, rewards
 
 **1.3 Utility Classes**
 
-- [ ] `StatsCalculator` - Stat calculations, modifiers, scaling
-- [ ] `ExperienceCalculator` - XP curves, level thresholds
-- [ ] `RandomGenerator` - Seeded random for breeding/battles
-- [ ] `ValidationHelper` - Common validation logic
+- [x] `StatsCalculator` - Stat calculations, modifiers, scaling
+- [x] `ExperienceCalculator` - XP curves, level thresholds
+- [x] `RandomGenerator` - Seeded random for breeding/battles
+- [x] `ValidationHelper` - Common validation logic
 
 ---
 
@@ -41,22 +41,17 @@
 
 **2.1 Repository Layer (In-Memory)**
 
-- [ ] `DragonRepository` - CRUD operations with in-memory storage
-- [ ] `TrainerRepository` - CRUD operations with in-memory storage
-- [ ] `BreedRepository` - Pre-populated breed data
-- [ ] `SkillRepository` - Pre-populated skill catalog
-- [ ] `QuestRepository` - Quest management
+- [x] `DragonRepository` - CRUD operations with in-memory storage
+- [x] `TrainerRepository` - CRUD operations with in-memory storage
+- [x] `BreedRepository` - Pre-populated breed data
+- [x] `SkillRepository` - Pre-populated skill catalog
+- [x] `QuestRepository` - Quest management
 
 **2.2 Test Infrastructure**
 
-- [ ] `MockDragonRepository` - In-memory dragon storage
-- [ ] `MockTrainerRepository` - In-memory trainer storage
-- [ ] `MockBreedRepository` - Pre-populated breed data
-- [ ] `MockSkillRepository` - Pre-populated skill catalog
-- [ ] `MockQuestRepository` - Quest test data
-- [ ] `TestDataFactory` - Create test dragons, trainers, etc.
-- [ ] `AssertionHelpers` - Custom assertions for domain objects
-- [ ] `TestSetup` - Common test configuration
+- [x] `TestDataFactory` - Create test dragons, trainers, etc.
+- [ ] `AssertionHelpers` - Custom assertions for domain objects (optional)
+- [ ] `TestSetup` - Common test configuration (optional)
 
 ---
 
@@ -64,9 +59,9 @@
 
 **3.1 TrainerService**
 
-- [ ] `registerTrainer(name, email)` - UC #3
-- [ ] `listTrainers(pagination, filters)` - UC #2
-- [ ] `assignDragonToTrainer(dragonId, trainerId)` - UC #4
+- [x] `registerTrainer(name, email)` - UC #3
+- [x] `listTrainers(pagination, filters)` - UC #2
+- [x] `assignDragonToTrainer(dragonId, trainerId)` - UC #4
 
 **3.2 DragonService (Basic)**
 
@@ -536,30 +531,30 @@ Each service follows this structure:
 
 ### Step 1: Foundation - Types & Models
 
-- [ ] Implement core types and enums
-- [ ] Implement entity models
-- [ ] Implement utility classes
-- [ ] Run basic validation tests
-- [ ] Present results to user
-- [ ] Wait for feedback
-- [ ] Commit changes
+- [x] Implement core types and enums
+- [x] Implement entity models
+- [x] Implement utility classes
+- [x] Run basic validation tests
+- [x] Present results to user
+- [x] Wait for feedback
+- [x] Commit changes
 
 ### Step 2: Infrastructure - Repositories
 
-- [ ] Implement all repository classes
-- [ ] Implement test infrastructure (mocks, factories, helpers)
-- [ ] Run repository tests
-- [ ] Present results to user
-- [ ] Wait for feedback
-- [ ] Commit changes
+- [x] Implement all repository classes
+- [x] Implement test infrastructure (mocks, factories, helpers)
+- [x] Run repository tests
+- [x] Present results to user
+- [x] Wait for feedback
+- [x] Commit changes
 
 ### Step 3: TrainerService
 
-- [ ] Implement TrainerService
-- [ ] Implement TrainerService tests
-- [ ] Run tests
-- [ ] Present results to user
-- [ ] Wait for feedback
+- [x] Implement TrainerService
+- [x] Implement TrainerService tests
+- [x] Run tests
+- [x] Present results to user
+- [x] Wait for feedback
 - [ ] Commit changes
 
 ### Step 4: DragonService (Basic)
