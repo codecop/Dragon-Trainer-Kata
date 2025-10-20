@@ -634,9 +634,22 @@ Each service follows this structure:
 Each step follows this workflow:
 
 1. **Implement** - Write the service class and/or test suite
-2. **Run Tests** - Execute all tests for the current service
-3. **Present Results** - Show test output, coverage, and any issues
-4. **Wait for Feedback** - Pause for user review and approval
-5. **Commit** - Create a git commit with descriptive message
+2. **Run ESLint** - Check code quality with strict linting rules (`npm run lint`)
+3. **Run Tests** - Execute all tests for the current service (`npm test`)
+4. **Verify** - Run both lint and tests together (`npm run verify`)
+5. **Present Results** - Show lint and test output, coverage, and any issues
+6. **Wait for Feedback** - Pause for user review and approval
+7. **Commit** - Create a git commit with descriptive message
+
+### ESLint Configuration
+
+Strict rules enabled:
+- Explicit return types required
+- No explicit `any` types
+- No unused variables
+- Floating promises must be handled
+- Prefer nullish coalescing and optional chaining
+- Curly braces required for all control structures
+- Strict equality checks (`===`)
 
 This ensures each service is fully validated before moving to the next, maintaining code quality and catching issues early.
