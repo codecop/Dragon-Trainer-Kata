@@ -78,6 +78,7 @@ export interface Quest {
     requiredSkillIds: string[]
     rewards: QuestReward
     status: QuestStatus
+    dragonId?: string
 }
 
 export interface QuestReward {

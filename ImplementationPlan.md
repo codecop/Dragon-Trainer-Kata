@@ -65,9 +65,9 @@
 
 **3.2 DragonService (Basic)**
 
-- [ ] `getDragonDetails(dragonId)` - UC #1
-- [ ] `createDragon(breedId, name, trainerId)` - UC #5
-  - [ ] Lookup breed, calculate base stats, assign elemental affinity
+- [x] `getDragonDetails(dragonId)` - UC #1
+- [x] `createDragon(breedId, name, trainerId)` - UC #5
+  - [x] Lookup breed, calculate base stats, assign elemental affinity
 
 ---
 
@@ -75,24 +75,24 @@
 
 **4.1 TrainingService**
 
-- [ ] `learnSkill(dragonId, skillId)` - UC #7
-  - [ ] Validate level requirements and prerequisites
-- [ ] `completeTrainingSession(dragonId, skillId, duration)` - UC #6
-  - [ ] Calculate experience based on duration and skill
-  - [ ] Update dragon's skill proficiency
-  - [ ] Check for level-up triggers
+- [x] `learnSkill(dragonId, skillId)` - UC #7
+  - [x] Validate level requirements and prerequisites
+- [x] `completeTrainingSession(dragonId, skillId, duration)` - UC #6
+  - [x] Calculate experience based on duration and skill
+  - [x] Update dragon's skill proficiency
+  - [x] Check for level-up triggers
 
 **4.2 QuestService**
 
-- [ ] `getAvailableQuests(dragonId)` - UC #8
-  - [ ] Filter by dragon level and elemental requirements
-- [ ] `startQuest(dragonId, questId)` - UC #9
-  - [ ] Validate requirements (level, element, skills)
-  - [ ] Set quest status to active
-- [ ] `completeQuest(dragonId, questId, performance)` - UC #10
-  - [ ] Calculate rewards based on performance metrics
-  - [ ] Award experience, items, currency
-  - [ ] Update dragon stats
+- [x] `getAvailableQuests(dragonId)` - UC #8
+  - [x] Filter by dragon level and elemental requirements
+- [x] `startQuest(dragonId, questId)` - UC #9
+  - [x] Validate requirements (level, element, skills)
+  - [x] Set quest status to active
+- [x] `completeQuest(dragonId, questId, performance)` - UC #10
+  - [x] Calculate rewards based on performance metrics
+  - [x] Award experience, items, currency
+  - [x] Update dragon stats
 
 ---
 
@@ -168,34 +168,34 @@ Each service follows this structure:
 
 ### TrainerService Implementation (~70 LoC)
 
-- [ ] `registerTrainer(name: string, email: string): Trainer`
-  - [ ] Validate email format
-  - [ ] Check for duplicate email
-  - [ ] Create trainer with generated ID
-  - [ ] Save to repository
-- [ ] `listTrainers(page: number, limit: number, filter?: string): Trainer[]`
-  - [ ] Pagination logic
-  - [ ] Optional name/email filtering
-  - [ ] Return sorted results
-- [ ] `assignDragonToTrainer(dragonId: string, trainerId: string): void`
-  - [ ] Validate trainer exists
-  - [ ] Validate dragon exists and is unassigned
-  - [ ] Update both entities
+- [x] `registerTrainer(name: string, email: string): Trainer`
+  - [x] Validate email format
+  - [x] Check for duplicate email
+  - [x] Create trainer with generated ID
+  - [x] Save to repository
+- [x] `listTrainers(page: number, limit: number, filter?: string): Trainer[]`
+  - [x] Pagination logic
+  - [x] Optional name/email filtering
+  - [x] Return sorted results
+- [x] `assignDragonToTrainer(dragonId: string, trainerId: string): void`
+  - [x] Validate trainer exists
+  - [x] Validate dragon exists and is unassigned
+  - [x] Update both entities
 
 ### TrainerService Tests (~80 LoC)
 
-- [ ] `registerTrainer` tests
-  - [ ] Should create trainer with valid data
-  - [ ] Should reject invalid email
-  - [ ] Should reject duplicate email
-- [ ] `listTrainers` tests
-  - [ ] Should paginate correctly
-  - [ ] Should filter by name
-  - [ ] Should return empty array when no trainers
-- [ ] `assignDragonToTrainer` tests
-  - [ ] Should link dragon to trainer
-  - [ ] Should throw when trainer not found
-  - [ ] Should throw when dragon already assigned
+- [x] `registerTrainer` tests
+  - [x] Should create trainer with valid data
+  - [x] Should reject invalid email
+  - [x] Should reject duplicate email
+- [x] `listTrainers` tests
+  - [x] Should paginate correctly
+  - [x] Should filter by name
+  - [x] Should return empty array when no trainers
+- [x] `assignDragonToTrainer` tests
+  - [x] Should link dragon to trainer
+  - [x] Should throw when trainer not found
+  - [x] Should throw when dragon already assigned
 
 ---
 
@@ -203,32 +203,32 @@ Each service follows this structure:
 
 ### DragonService Implementation (~80 LoC)
 
-- [ ] `getDragonDetails(dragonId: string): DragonDetails`
-  - [ ] Fetch dragon from repository
-  - [ ] Enrich with breed information
-  - [ ] Include skill details
-  - [ ] Format stats for display
-- [ ] `createDragon(breedId: string, name: string, trainerId?: string): Dragon`
-  - [ ] Validate breed exists
-  - [ ] Lookup breed base stats
-  - [ ] Calculate initial stats
-  - [ ] Assign elemental affinity from breed
-  - [ ] Set evolution stage to Hatchling
-  - [ ] Save to repository
+- [x] `getDragonDetails(dragonId: string): DragonDetails`
+  - [x] Fetch dragon from repository
+  - [x] Enrich with breed information
+  - [x] Include skill details
+  - [x] Format stats for display
+- [x] `createDragon(breedId: string, name: string, trainerId?: string): Dragon`
+  - [x] Validate breed exists
+  - [x] Lookup breed base stats
+  - [x] Calculate initial stats
+  - [x] Assign elemental affinity from breed
+  - [x] Set evolution stage to Hatchling
+  - [x] Save to repository
 
 ### DragonService Tests (~100 LoC)
 
-- [ ] `getDragonDetails` tests
-  - [ ] Should return complete dragon details
-  - [ ] Should include breed information
-  - [ ] Should throw when dragon not found
-  - [ ] Should handle dragon without skills
-- [ ] `createDragon` tests
-  - [ ] Should create dragon with breed stats
-  - [ ] Should assign correct elemental affinity
-  - [ ] Should start at Hatchling stage
-  - [ ] Should throw when breed not found
-  - [ ] Should link to trainer if provided
+- [x] `getDragonDetails` tests
+  - [x] Should return complete dragon details
+  - [x] Should include breed information
+  - [x] Should throw when dragon not found
+  - [x] Should handle dragon without skills
+- [x] `createDragon` tests
+  - [x] Should create dragon with breed stats
+  - [x] Should assign correct elemental affinity
+  - [x] Should start at Hatchling stage
+  - [x] Should throw when breed not found
+  - [x] Should link to trainer if provided
 
 ---
 
@@ -236,34 +236,34 @@ Each service follows this structure:
 
 ### TrainingService Implementation (~90 LoC)
 
-- [ ] `completeTrainingSession(dragonId: string, skillId: string, duration: number): TrainingResult`
-  - [ ] Validate dragon and skill exist
-  - [ ] Calculate experience gain (duration × skill multiplier)
-  - [ ] Update skill proficiency
-  - [ ] Check for level-up
-  - [ ] Record training session
-  - [ ] Return results with level-up flag
-- [ ] `learnSkill(dragonId: string, skillId: string): void`
-  - [ ] Validate dragon level meets requirement
-  - [ ] Check prerequisites are met
-  - [ ] Validate skill not already learned
-  - [ ] Add skill to dragon
-  - [ ] Initialize proficiency at 0
+- [x] `completeTrainingSession(dragonId: string, skillId: string, duration: number): TrainingResult`
+  - [x] Validate dragon and skill exist
+  - [x] Calculate experience gain (duration × skill multiplier)
+  - [x] Update skill proficiency
+  - [x] Check for level-up
+  - [x] Record training session
+  - [x] Return results with level-up flag
+- [x] `learnSkill(dragonId: string, skillId: string): void`
+  - [x] Validate dragon level meets requirement
+  - [x] Check prerequisites are met
+  - [x] Validate skill not already learned
+  - [x] Add skill to dragon
+  - [x] Initialize proficiency at 0
 
 ### TrainingService Tests (~110 LoC)
 
-- [ ] `completeTrainingSession` tests
-  - [ ] Should award experience correctly
-  - [ ] Should increase skill proficiency
-  - [ ] Should trigger level-up when threshold reached
-  - [ ] Should record training session
-  - [ ] Should throw when dragon not found
-- [ ] `learnSkill` tests
-  - [ ] Should add skill to dragon
-  - [ ] Should reject if level too low
-  - [ ] Should reject if prerequisites not met
-  - [ ] Should reject if skill already learned
-  - [ ] Should initialize proficiency to zero
+- [x] `completeTrainingSession` tests
+  - [x] Should award experience correctly
+  - [x] Should increase skill proficiency
+  - [x] Should trigger level-up when threshold reached
+  - [x] Should record training session
+  - [x] Should throw when dragon not found
+- [x] `learnSkill` tests
+  - [x] Should add skill to dragon
+  - [x] Should reject if level too low
+  - [x] Should reject if prerequisites not met
+  - [x] Should reject if skill already learned
+  - [x] Should initialize proficiency to zero
 
 ---
 
@@ -271,47 +271,47 @@ Each service follows this structure:
 
 ### QuestService Implementation (~120 LoC)
 
-- [ ] `getAvailableQuests(dragonId: string): Quest[]`
-  - [ ] Fetch dragon details
-  - [ ] Filter quests by level range
-  - [ ] Filter by elemental requirements
-  - [ ] Filter by skill requirements
-  - [ ] Exclude already completed quests
-  - [ ] Return sorted by difficulty
-- [ ] `startQuest(dragonId: string, questId: string): void`
-  - [ ] Validate quest available
-  - [ ] Check dragon not on another quest
-  - [ ] Validate all requirements met
-  - [ ] Set quest status to active
-  - [ ] Record start time
-- [ ] `completeQuest(dragonId: string, questId: string, performance: number): QuestReward`
-  - [ ] Validate quest is active
-  - [ ] Calculate base rewards
-  - [ ] Apply performance multiplier
-  - [ ] Award experience to dragon
-  - [ ] Distribute loot items
-  - [ ] Update quest status to completed
-  - [ ] Return reward summary
+- [x] `getAvailableQuests(dragonId: string): Quest[]`
+  - [x] Fetch dragon details
+  - [x] Filter quests by level range
+  - [x] Filter by elemental requirements
+  - [x] Filter by skill requirements
+  - [x] Exclude already completed quests
+  - [x] Return sorted by difficulty
+- [x] `startQuest(dragonId: string, questId: string): void`
+  - [x] Validate quest available
+  - [x] Check dragon not on another quest
+  - [x] Validate all requirements met
+  - [x] Set quest status to active
+  - [x] Record start time
+- [x] `completeQuest(dragonId: string, questId: string, performance: number): QuestReward`
+  - [x] Validate quest is active
+  - [x] Calculate base rewards
+  - [x] Apply performance multiplier
+  - [x] Award experience to dragon
+  - [x] Distribute loot items
+  - [x] Update quest status to completed
+  - [x] Return reward summary
 
 ### QuestService Tests (~130 LoC)
 
-- [ ] `getAvailableQuests` tests
-  - [ ] Should filter by dragon level
-  - [ ] Should filter by elemental affinity
-  - [ ] Should exclude completed quests
-  - [ ] Should return empty for low-level dragon
-  - [ ] Should include quests matching requirements
-- [ ] `startQuest` tests
-  - [ ] Should activate quest
-  - [ ] Should throw if requirements not met
-  - [ ] Should throw if dragon on another quest
-  - [ ] Should record start time
-- [ ] `completeQuest` tests
-  - [ ] Should calculate rewards correctly
-  - [ ] Should apply performance multiplier
-  - [ ] Should award experience
-  - [ ] Should throw if quest not active
-  - [ ] Should mark quest as completed
+- [x] `getAvailableQuests` tests
+  - [x] Should filter by dragon level
+  - [x] Should filter by elemental affinity
+  - [x] Should exclude completed quests
+  - [x] Should return empty for low-level dragon
+  - [x] Should include quests matching requirements
+- [x] `startQuest` tests
+  - [x] Should activate quest
+  - [x] Should throw if requirements not met
+  - [x] Should throw if dragon on another quest
+  - [x] Should record start time
+- [x] `completeQuest` tests
+  - [x] Should calculate rewards correctly
+  - [x] Should apply performance multiplier
+  - [x] Should award experience
+  - [x] Should throw if quest not active
+  - [x] Should mark quest as completed
 
 ---
 
@@ -555,33 +555,33 @@ Each service follows this structure:
 - [x] Run tests
 - [x] Present results to user
 - [x] Wait for feedback
-- [ ] Commit changes
+- [x] Commit changes
 
 ### Step 4: DragonService (Basic)
 
-- [ ] Implement DragonService basic methods
-- [ ] Implement DragonService tests
-- [ ] Run tests
-- [ ] Present results to user
-- [ ] Wait for feedback
-- [ ] Commit changes
+- [x] Implement DragonService basic methods
+- [x] Implement DragonService tests
+- [x] Run tests
+- [x] Present results to user
+- [x] Wait for feedback
+- [x] Commit changes
 
 ### Step 5: TrainingService
 
-- [ ] Implement TrainingService
-- [ ] Implement TrainingService tests
-- [ ] Run tests
-- [ ] Present results to user
-- [ ] Wait for feedback
-- [ ] Commit changes
+- [x] Implement TrainingService
+- [x] Implement TrainingService tests
+- [x] Run tests
+- [x] Present results to user
+- [x] Wait for feedback
+- [x] Commit changes
 
 ### Step 6: QuestService
 
-- [ ] Implement QuestService (all methods)
-- [ ] Implement QuestService tests
-- [ ] Run tests
-- [ ] Present results to user
-- [ ] Wait for feedback
+- [x] Implement QuestService (all methods)
+- [x] Implement QuestService tests
+- [x] Run tests
+- [x] Present results to user
+- [x] Wait for feedback
 - [ ] Commit changes
 
 ### Step 7: EvolutionService

@@ -21,6 +21,7 @@
         "test:coverage": "node --no-warnings ./node_modules/jest/bin/jest.js --coverage",
         "lint": "eslint src tests --ext .ts",
         "lint:fix": "eslint src tests --ext .ts --fix",
-        "verify": "npm run lint && npm test"
+        "verify": "npm run clean && npm run build && npm run clean && npm run lint && npm test",
+        "clean": "rimraf build"
     }
 }
