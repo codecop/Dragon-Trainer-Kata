@@ -9,12 +9,13 @@
         "@typescript-eslint/parser": "^4.33.0",
         "eslint": "^7.32.0",
         "jest": "^26.0.0",
+        "jest-silent-reporter": "^0.6.0",
         "ts-jest": "^26.0.0",
         "ts-node": "^10.0.0",
         "typescript": "4.3.2"
     },
     "scripts": {
-        "test": "node --no-warnings ./node_modules/jest/bin/jest.js",
+        "test": "node --no-warnings ./node_modules/jest/bin/jest.js --reporters=jest-silent-reporter",
         "test:verbose": "node --no-warnings ./node_modules/jest/bin/jest.js --verbose",
         "build": "tsc",
         "test:coverage": "node --no-warnings ./node_modules/jest/bin/jest.js --coverage",
