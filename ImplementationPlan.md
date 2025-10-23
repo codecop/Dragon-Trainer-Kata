@@ -10,7 +10,7 @@
 
 ---
 
-## Phase 1: Foundation - Types & Models (≈200 LoC)
+## Phase 1: Foundation - Types & Models (~200 LoC)
 
 **1.1 Define Core Types & Enums**
 
@@ -37,7 +37,7 @@
 
 ---
 
-## Phase 2: Infrastructure - Repositories & Test Setup (≈300 LoC)
+## Phase 2: Infrastructure - Repositories & Test Setup (~300 LoC)
 
 **2.1 Repository Layer (In-Memory)**
 
@@ -55,7 +55,7 @@
 
 ---
 
-## Phase 3: Core Services - Basic CRUD (≈330 LoC)
+## Phase 3: Core Services - Basic CRUD (~330 LoC)
 
 **3.1 TrainerService**
 
@@ -71,7 +71,7 @@
 
 ---
 
-## Phase 4: Business Logic - Medium Complexity (≈500 LoC)
+## Phase 4: Business Logic - Medium Complexity (~500 LoC)
 
 **4.1 TrainingService**
 
@@ -96,7 +96,7 @@
 
 ---
 
-## Phase 5: Advanced Features - High Complexity (≈600 LoC)
+## Phase 5: Advanced Features - High Complexity (~600 LoC)
 
 **5.1 EvolutionService**
 
@@ -164,7 +164,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 1: TrainerService + Tests (≈150 LoC)
+## Phase 1: TrainerService + Tests (~150 LoC)
 
 ### TrainerService Implementation (~70 LoC)
 
@@ -199,7 +199,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 2: DragonService (Basic) + Tests (≈180 LoC)
+## Phase 2: DragonService (Basic) + Tests (~180 LoC)
 
 ### DragonService Implementation (~80 LoC)
 
@@ -232,13 +232,13 @@ Each service follows this structure:
 
 ---
 
-## Phase 3: TrainingService + Tests (≈200 LoC)
+## Phase 3: TrainingService + Tests (~200 LoC)
 
 ### TrainingService Implementation (~90 LoC)
 
 - [x] `completeTrainingSession(dragonId: string, skillId: string, duration: number): TrainingResult`
   - [x] Validate dragon and skill exist
-  - [x] Calculate experience gain (duration × skill multiplier)
+  - [x] Calculate experience gain (duration * skill multiplier)
   - [x] Update skill proficiency
   - [x] Check for level-up
   - [x] Record training session
@@ -267,7 +267,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 4: QuestService + Tests (≈250 LoC)
+## Phase 4: QuestService + Tests (~250 LoC)
 
 ### QuestService Implementation (~120 LoC)
 
@@ -315,7 +315,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 5: EvolutionService + Tests (≈180 LoC)
+## Phase 5: EvolutionService + Tests (~180 LoC)
 
 ### EvolutionService Implementation (~80 LoC)
 
@@ -347,7 +347,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 6: BreedingService + Tests (≈220 LoC)
+## Phase 6: BreedingService + Tests (~220 LoC)
 
 ### BreedingService Implementation (~100 LoC)
 
@@ -384,7 +384,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 7: SkillProgressionService + Tests (≈200 LoC)
+## Phase 7: SkillProgressionService + Tests (~200 LoC)
 
 ### SkillProgressionService Implementation (~90 LoC)
 
@@ -417,13 +417,13 @@ Each service follows this structure:
 
 ---
 
-## Phase 8: TournamentService + Tests (≈180 LoC)
+## Phase 8: TournamentService + Tests (~180 LoC)
 
 ### TournamentService Implementation (~80 LoC)
 
 - [ ] `findMatch(dragonId: string): Dragon`
   - [ ] Fetch dragon details
-  - [ ] Find dragons in level range (±3 levels)
+  - [ ] Find dragons in level range (�3 levels)
   - [ ] Calculate compatibility scores
   - [ ] Factor in elemental advantages
   - [ ] Consider skill matchups
@@ -450,7 +450,7 @@ Each service follows this structure:
 
 ---
 
-## Phase 9: BattleService + Tests (≈280 LoC)
+## Phase 9: BattleService + Tests (~280 LoC)
 
 ### BattleService Implementation (~150 LoC)
 
@@ -470,7 +470,7 @@ Each service follows this structure:
   - [ ] Base damage from skill and attack stat
   - [ ] Elemental multiplier (2x advantage, 0.5x disadvantage)
   - [ ] Defense reduction
-  - [ ] Random variance (±10%)
+  - [ ] Random variance (�10%)
 
 ### BattleService Tests (~130 LoC)
 
@@ -493,7 +493,7 @@ Each service follows this structure:
 
 ---
 
-## Test Infrastructure (≈150 LoC)
+## Test Infrastructure (~150 LoC)
 
 ### Mock Repositories (~80 LoC)
 
