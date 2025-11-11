@@ -6,12 +6,12 @@ import { Dragon, Element, EvolutionStage } from '../../src/types'
 describe('EvolutionService', () => {
     let service: EvolutionService
     let breedRepository: BreedRepository
-    let dragonRepository: DragonRepository
+    let mockedDragonRepository: DragonRepository
 
     beforeEach(() => {
         breedRepository = new BreedRepository()
-        dragonRepository = new DragonRepository()
-        service = new EvolutionService(dragonRepository, breedRepository)
+        mockedDragonRepository = new DragonRepository()
+        service = new EvolutionService(mockedDragonRepository, breedRepository)
     })
 
     describe('evolveDragon', () => {
@@ -31,6 +31,7 @@ describe('EvolutionService', () => {
         // kann nicht weiter evolven
 
         it('should stay hatchling without experience', () => {
+            // givenDragonWith({breed:'fire-dragon', level:1, state:EvolutionStage.Hatchling})
             const breed = breedRepository.findById('fire-dragon')!
             const hatchling: Dragon = {
                 id: 'dragon-123412341234',
@@ -46,14 +47,21 @@ describe('EvolutionService', () => {
 
             const updated: Dragon = service.evolveDragon(hatchling);
 
+            // not updated
             expect(updated.evolutionStage).toBe(EvolutionStage.Hatchling)
             expect(updated.stats.hp).toBe(100)
+
+            // not persisted, maybe second test
+            expect(mockedDragonRepository.update).toHaveBeenCalledTimes(0)
 
             /*
              * 1. Wir haben 50' für den ersten Test. Die Angabe war gering, aber es
              *    reicht eigentlich, man findet alles irgendwie heraus.
              *    Wir wollen nicht alle Services verwenden, daher hard-coded Werte und
              *    mocked services.
+             * 2. Es ist gleich die Frage nach Ändern des Designs gekommen. Was heißt das?
+             *    Eine Diskussion ob **alle Services auf alle Repositories gehen dürfen**?
+             * 3. Fachlich natürlich viele "Fragen", warum passiert das nicht gleich beim Level up?
              */
         })
     })
