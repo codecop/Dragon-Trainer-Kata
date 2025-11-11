@@ -1,19 +1,25 @@
 # Dragon Evolution System
 
-Complex State Transformation, Validation
+Skill: Complex State Transformation, Validation
 
-Hard
+Level: Hard
 
-Implement `EvolutionService.evolveDragon()` that checks evolution requirements, applies breed-specific stat multipliers from `BreedRepository`, and updates evolution stage. Handle edge cases like max evolution.
+Description: Implement `EvolutionService.evolveDragon()` that checks evolution requirements, applies breed-specific stat multipliers from `BreedRepository`, and updates evolution stage. Handle edge cases like max evolution.
 
-Use TDD
+Constraint: Use TDD
 
-## 5.1 EvolutionService
+## Steps
 
-- [ ] `evolveDragon(dragonId)` - UC #11
-  - [ ] Check evolution threshold
-  - [ ] Apply breed-specific transformation rules
-  - [ ] Recalculate all stats with multipliers
-  - [ ] Update evolution stage
+* copy `DragonServiceTest` and make similar
+* find all required data and code somewhere
+* use first test for empty body
 
-Copy `DragonServiceTest`
+### Our Rating
+
+Lustig weil man im Code suchen muss.
+Was würde man draus lernen?
+
+* Code Navigieren
+* Typen verfolgen und finden
+* von ähnlichen Strukturen ableiten
+* in bestehendem Design weiter arbeiten
