@@ -7,4 +7,8 @@ export class EvolutionService {
         private breedRepository: BreedRepository
     ) { }
 
+    evolveDragon(dragon: Dragon): Dragon {
+        return dragon
+    }
+
 }

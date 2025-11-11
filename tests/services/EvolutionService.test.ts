@@ -1,5 +1,6 @@
 import { EvolutionService } from '../../src/services/EvolutionService'
 import { DragonRepository, BreedRepository } from '../../src/repositories'
+jest.mock('../../src/repositories/DragonRepository')
 import { Dragon, Element, EvolutionStage } from '../../src/types'
 
 describe('EvolutionService', () => {
@@ -9,7 +10,7 @@ describe('EvolutionService', () => {
 
     beforeEach(() => {
         breedRepository = new BreedRepository()
-        dragonRepository = undefined! // TODO mock
+        dragonRepository = new DragonRepository()
         service = new EvolutionService(dragonRepository, breedRepository)
     })
 
@@ -18,6 +19,7 @@ describe('EvolutionService', () => {
         // applies breed-specific stat multipliers from `BreedRepository`
         // updates evolution stage
         // Handle edge cases like max evolution.
+
         // existing code:
         // export enum EvolutionStage {
         //     Hatchling = 'Hatchling',
@@ -46,6 +48,13 @@ describe('EvolutionService', () => {
 
             expect(updated.evolutionStage).toBe(EvolutionStage.Hatchling)
             expect(updated.stats.hp).toBe(100)
+
+            /*
+             * 1. Wir haben 50' für den ersten Test. Die Angabe war gering, aber es
+             *    reicht eigentlich, man findet alles irgendwie heraus.
+             *    Wir wollen nicht alle Services verwenden, daher hard-coded Werte und
+             *    mocked services.
+             */
         })
     })
 
