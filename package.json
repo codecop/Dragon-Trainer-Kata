@@ -16,7 +16,7 @@
     },
     "scripts": {
         "test": "node --no-warnings ./node_modules/jest/bin/jest.js --reporters=jest-silent-reporter",
-        "test:verbose": "node --no-warnings ./node_modules/jest/bin/jest.js --verbose",
+        "test:verbose": "node ./node_modules/jest/bin/jest.js --verbose",
         "build": "tsc",
         "test:coverage": "node --no-warnings ./node_modules/jest/bin/jest.js --coverage",
         "lint": "eslint src tests --ext .ts",

@@ -2,7 +2,7 @@
 
 ## Ziel
 
-* für ein TDD Training brauche ein Stück Code
+* für ein TDD Training brauchen wir ein Stück Code
 * das so gross ist dass man es in 1h nicht verstehen kann
 * und ist Teil von etwas noch grösserem.
 * z.B. Interfaces.
