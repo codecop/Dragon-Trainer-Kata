@@ -1,28 +1,38 @@
-# Legacy Code Beispiel
+# Legacy Code Example
 
-## Ziel
+## Goal
 
-* für ein TDD Training brauchen wir ein Stück Code
-* das so gross ist dass man es in 1h nicht verstehen kann
-* und ist Teil von etwas noch grösserem.
-* z.B. Interfaces.
-* weil die Leute sagen es ist zu klein
-* Was ist Dein Learning Objective? für TDD, dann OK code aber nicht entkoppelt.
-  * Ziel: First make the change easy then make the easy change. D.h. für Modifikation vorher Refactoren.
-    * Was muss es haben?
-      * Architektur für nächstes Feature nicht passend
-  * Ziel: Code verstehen durch "Read by Refactoring".
-    * Was muss es haben?
-      * Code Smells und gross sein, dass es nicht
-* anderes Training: mit Code arbeiten den wir nicht verstehen
-  * refactoren ohne code zu verstehen -> schwer zu verstehen (weil Größe das Hauptargument für "schwer zu verstehen" ist)
-  * bugfix ohne code zu verstehen (blast radius finden und mit tests vergleichen) -> unterschiedliche blast radius und tests, variable Grenze in Kopplung
-  * widespread refactoring -> Architektur Entscheidung an vielen Stellen
+For a TDD training we need a piece of code
+that is large enough that you cannot understand it within 1 hour
+and that is part of something even larger.
+For example, with interfaces.
+Because people usually say the exercise is too small.
+
+### By Learning Goals
+
+What is the learning objective?
+
+* Goal: Add a feature using TDD.
+  * What does it need to have?
+  * It needs to be OK code but not decoupled.
+
+* Goal: First make the change easy, then make the easy change. That is, refactor first before making a modification.
+  * What does it need to have?
+  * An architecture that is not suitable for the next feature.
+
+* Goal: Understand code through "Read by Refactoring".
+  * What does it need to have?
+  * Code smells and be large enough that it is not easy to understand.
+  
+* Goal: working with code that we do not understand
+  * Refactor without understanding the code -> hard to understand (because size is the main argument for "hard to understand")
+  * Bug fix without understanding the code (find the "blast radius" and compare it with the tests) -> different blast radius and tests, variable boundary in coupling
+  * Widespread refactoring -> architectural decision in many places
 
 ## Scope
 
-* Wie gross müsste es sein? Idee
-  * es gibt leicht zu verstehen (e.g. Trivia, Gilded Rose) aber schwer zu ändern
-  * es gibt schwer zu verstehen (? TriviaOO) aber leicht zu ändern?
-  * mehr Funktionalität als typische Kata
-  * 2kLoc in 3 Services wäre vielleicht genug
+* How large would it need to be?
+* There is code that is easy to understand (e.g. Trivia, Gilded Rose) but hard to change.
+* There is code that is hard to understand (e.g. TriviaOO) but easy to change.
+* It needs more functionality than a typical kata.
+* Maybe 2 kLoC in 3 services might be enough.
