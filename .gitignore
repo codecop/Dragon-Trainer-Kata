@@ -25,3 +25,9 @@ build/
 .idea
 *.iml
 *.iwr
+
+# Peter's markers
+env.bat
+TODO *
+Weiter *
+Idee - *
