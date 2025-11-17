@@ -1,20 +1,3 @@
-# Large Code Base
-
-* low and med complex services
-* 979 LoC code
-* 930 LoC tests
-* 1h40 from idea
-* 1h AI coding ~ 2000 LoC in 1h sounds nice for managers
-
-## possible tasks
-
-* fix bug in level up logic in all 3 places: **Location:** `DragonModel.gainExperience()` vs `QuestService.completeQuest()` vs `TrainingService.completeTrainingSession()`
-* remove duplication of ID generation logic: **Location:** `DragonService.generateId()`, `TrainerService.generateId()`, `TrainingService.generateId()`
-* remove primitive obsession, e.g. `dragonId: string`, `trainerId: string`, `skillId: string`, levels, experience, etc...
-* Package by Feature: split types and enums (cohesive domain model packages, e.g. Quest + everything about quests)
-
----
-
 # Code Analysis Report: Dragon Training System
 
 ## Executive Summary
@@ -29,7 +12,7 @@ Analysis of the Dragon Training System reveals **15 significant issues** across 
 
 ---
 
-## 🔴 Critical Issues
+## Critical Issues
 
 ### 2. **Data Consistency Problem: Bidirectional References Not Maintained**
 
@@ -129,7 +112,7 @@ startQuest(dragonId: string, questId: string): Quest {
 
 ---
 
-## 🟡 Major Issues
+## Major Issues
 
 ### 10. **Missing Error Handling for Repository Updates**
 
@@ -151,7 +134,7 @@ No handling for:
 
 ---
 
-## 🟢 Minor Issues & Code Smells
+## Minor Issues & Code Smells
 
 ### 13. **Unused Interfaces**
 

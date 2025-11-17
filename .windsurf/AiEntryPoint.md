@@ -16,3 +16,5 @@ See @Domain.md for the overall scope of the domain and its main concepts.
 See @Development.md for technology choices, architecture, and detailed coding, testing, and formatting guidelines.
 
 See @ImplementationPlan.md for what is already implemented and what is planned next.
+
+See @CodebaseSize.md for a summary of the current codebase size and composition.
