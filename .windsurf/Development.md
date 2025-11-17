@@ -109,3 +109,17 @@
 * Utilities in separate `utils/` directory
 * Models in separate `models/` directory
 * Types in separate `types/` directory
+
+### ESLint configuration
+
+ESLint is configured with strict rules to keep the codebase consistent and safe:
+
+* Explicit return types are required.
+* No explicit `any` types.
+* No unused variables.
+* Floating promises must be handled.
+* Prefer nullish coalescing and optional chaining where appropriate.
+* Curly braces are required for all control structures.
+* Strict equality checks (`===`) must be used.
+
+These rules help ensure each change is fully validated before moving to the next step, maintaining code quality and catching issues early.
