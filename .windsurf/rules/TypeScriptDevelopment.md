@@ -1,4 +1,9 @@
-# Development Rules
+---
+trigger: glob
+globs: src/**/*.ts, tests/**/*.ts
+---
+
+# TypeScript Development Rules
 
 ## Technology & General Rules
 

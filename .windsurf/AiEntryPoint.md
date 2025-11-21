@@ -13,7 +13,7 @@ See @ConsideringCodeSize.md for background information and the overall scope of 
 
 See @Domain.md for the overall scope of the domain and its main concepts.
 
-See @Development.md for technology choices, architecture, and detailed coding, testing, and formatting guidelines.
+See @TypeScriptDevelopment.md for technology choices, architecture, and detailed coding, testing, and formatting guidelines.
 
 See @ImplementationPlan.md for what is already implemented and what is planned next.
 
